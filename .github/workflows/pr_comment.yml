@@ -10,7 +10,7 @@ env:
   PR_NUMBER: ${{ github.event.number }}
 
 jobs:
-  build:
+  create_comment:
     name: Create PR comment
     runs-on: ubuntu-latest
     steps:
