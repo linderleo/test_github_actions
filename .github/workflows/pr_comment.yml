@@ -1,13 +1,20 @@
 name: Add PR comment
 on:
   pull_request:
-    types: [opened]
+    types: 
+      - opened
+      - reopened
+      - synchronize
+      
+env:
+  PR_NUMBER: ${{ github.event.number }}
+
 jobs:
   build:
     name: Create PR comment
     runs-on: ubuntu-latest
     steps:
-      - run: gh pr comment $PR_URL --body "A New Comment Was Added to Pull Request"
+      - run: gh pr comment $PR_URL --body "https://foobar-test-pr-${{ env.PR_NUMBER }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_URL: ${{ github.event.pull_request.html_url }}
