@@ -1,6 +1,8 @@
 name: Add PR comment
 on:
   pull_request:
+    branches:
+      - main
     types: 
       - opened
       - reopened
@@ -15,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create PR comment only on opened
-        if: ${{ github.event.type == 'reopened' }}
+        if: ${{ github.event.action == 'opened' }}
         run: gh pr comment $PR_URL --body "https://testiosoite-test-pr-${{ env.PR_NUMBER }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
