@@ -20,7 +20,8 @@ jobs:
       - name: Create PR comment only on opened
         if: ${{ github.event.action == 'reopened' }}
         run: |
-          gh pr comment $PR_URL --body "APP1: https://testiosoite-test-pr-${{ env.PR_NUMBER }}
-          APP2: https://testiosoite2-test-pr-${{ env.PR_NUMBER }}"
+          gh pr comment $PR_URL --body "APPLICATIONS:
+          https://testiosoite-test-pr-${{ env.PR_NUMBER }}
+          https://testiosoite2-test-pr-${{ env.PR_NUMBER }}"
           
           
