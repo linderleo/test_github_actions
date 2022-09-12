@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create PR comment only on opened
-        if: ${{ github.event.action == 'synchronized' }}
+        if: ${{ github.event.action == 'opened' }}
         run: |
           gh pr comment $PR_URL --body "https://testiosoite-test-pr-${{ env.PR_NUMBER }}
           https://testiosoite2-test-pr-${{ env.PR_NUMBER }}"
