@@ -5,7 +5,7 @@
   Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
 -->
 
-See [the other readme] (README_another.md)
+See [the other readme] (./README_another.md)
 
 # Hello GitHub Actions !
 
