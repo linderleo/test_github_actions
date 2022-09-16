@@ -5,9 +5,9 @@
   Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
 -->
 
-See [the other readme] (https://github.com/linderleo/test_github_actions/edit/main/README_another.md)
+See [the other readme](README_another.md)
 
-[Lets go to Quora](https://www.quora.com)
+
 
 # Hello GitHub Actions !
 
